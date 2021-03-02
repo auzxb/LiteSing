@@ -16,23 +16,21 @@
   Experiment results show that LiteSing outperforms the baseline model using feed-forward Transformer
   by 1.386 times faster on inference speed, 15 times smaller on training parameters number,
   and almost the same MOS on sound quality. Through an A/B test, LiteSing achieves 67.3% preference
-  rate over baseline in expressiveness, which suggests the advantage of LiteSing over the other compared models.</div> 
+  rate over baseline in expressiveness, which suggests the advantage of LiteSing over the other compared models.</div>
 
 ![arch](img/litesing.png)
 
 ## Results
 
-For each singing voice synthesis system, we prepare 40 audio samples and ask 6 listeners to evaluate each sample in three aspects, 
-such as **sound quality, pronunciation accuracy,  and expressiveness**. The mean opinion score (MOS) is averaged over all the samples in three aspects.
+For each singing voice synthesis system, we prepare 40 audio samples and ask 6 listeners to evaluate each sample in three aspects,
+such as **sound quality, pronunciation accuracy, and expressiveness**. The mean opinion score (MOS) is averaged over all the samples in three aspects.
 
 ![arch](img/mos.png)
 
-To compare the improvement in expressiveness, we have an A/B test for evaluating the expressiveness of LiteSing and FastSpeech2 in two aspects: 
-**pitch curve and dynamic energy**. It shows that 67.3% supports LiteSing, while only 18.3% supports FastSpeech2. When we feed the full conditions 
+To compare the improvement in expressiveness, we have an A/B test for evaluating the expressiveness of LiteSing and FastSpeech2 in two aspects:
+**pitch curve and dynamic energy**. It shows that 67.3% supports LiteSing, while only 18.3% supports FastSpeech2. When we feed the full conditions
 extracted from reference recordings to LiteSing, experiment results show that 79.4% supports LiteSing while only 10.1% supports FastSpeech2.
 ![arch](img/abtest.png)
-
-
 
 ## Singing Voice Samples
 
@@ -47,10 +45,10 @@ extracted from reference recordings to LiteSing, experiment results show that 79
     <tr>
       <th>Recording</th>
       <th>Reconstruction</th>
+      <th>LiteSing(proposed)</th>
       <th>NPSS</th>
       <th>FastSpeech2</th>
       <th>LiteSing-MSE</th>
-      <th>LiteSing</th>
     </tr>
   </thead>
 
@@ -61,14 +59,16 @@ extracted from reference recordings to LiteSing, experiment results show that 79
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/1024_kunnka_12_world.wav"></audio></td>
       <td><audio controls="" preload="auto">
+            <source src="audio/kg_kun/1024_kunnka_12_ls.wav"></audio></td>
+      <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/1024_kunnka_12_npss.wav"></audio></td>
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/1024_kunnka_12_fs2.wav"></audio></td>
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/1024_kunnka_12_lsmse.wav"></audio></td>
-      <td><audio controls="" preload="auto">
-            <source src="audio/kg_kun/1024_kunnka_12_ls.wav"></audio></td>
+
     </tr>
+
   </tbody>
 
   <tbody>
@@ -78,13 +78,13 @@ extracted from reference recordings to LiteSing, experiment results show that 79
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/1024_kunnka_23_world.wav"></audio></td>
       <td><audio controls="" preload="auto">
+            <source src="audio/kg_kun/1024_kunnka_23_ls.wav"></audio></td>
+      <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/1024_kunnka_23_npss.wav"></audio></td>
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/1024_kunnka_23_fs2.wav"></audio></td>
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/1024_kunnka_23_lsmse.wav"></audio></td>
-      <td><audio controls="" preload="auto">
-            <source src="audio/kg_kun/1024_kunnka_23_ls.wav"></audio></td>
     </tr>
   </tbody>
 
@@ -95,13 +95,13 @@ extracted from reference recordings to LiteSing, experiment results show that 79
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/10422_kunnka_18_world.wav"></audio></td>
       <td><audio controls="" preload="auto">
+            <source src="audio/kg_kun/10422_kunnka_18_ls.wav"></audio></td>
+      <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/10422_kunnka_18_npss.wav"></audio></td>
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/10422_kunnka_18_fs2.wav"></audio></td>
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/10422_kunnka_18_lsmse.wav"></audio></td>
-      <td><audio controls="" preload="auto">
-            <source src="audio/kg_kun/10422_kunnka_18_ls.wav"></audio></td>
     </tr>
   </tbody>
 
@@ -112,13 +112,13 @@ extracted from reference recordings to LiteSing, experiment results show that 79
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/21379_kunnka_23_world.wav"></audio></td>
       <td><audio controls="" preload="auto">
+            <source src="audio/kg_kun/21379_kunnka_23_ls.wav"></audio></td>
+      <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/21379_kunnka_23_npss.wav"></audio></td>
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/21379_kunnka_23_fs2.wav"></audio></td>
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/21379_kunnka_23_lsmse.wav"></audio></td>
-      <td><audio controls="" preload="auto">
-            <source src="audio/kg_kun/21379_kunnka_23_ls.wav"></audio></td>
     </tr>
   </tbody>
 
@@ -129,15 +129,14 @@ extracted from reference recordings to LiteSing, experiment results show that 79
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/6427378_kunnka_9_world.wav"></audio></td>
       <td><audio controls="" preload="auto">
+            <source src="audio/kg_kun/6427378_kunnka_9_ls.wav"></audio></td>
+      <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/6427378_kunnka_9_npss.wav"></audio></td>
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/6427378_kunnka_9_fs2.wav"></audio></td>
       <td><audio controls="" preload="auto">
             <source src="audio/kg_kun/6427378_kunnka_9_lsmse.wav"></audio></td>
-      <td><audio controls="" preload="auto">
-            <source src="audio/kg_kun/6427378_kunnka_9_ls.wav"></audio></td>
     </tr>
   </tbody>
 
 </table>
-
